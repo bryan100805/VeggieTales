@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2024-01-25T06:49:06.367Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="fvLE4mPD4ZL9aGmEeQ0s" version="23.0.1" type="gitlab">
+  <diagram name="Page-1" id="03018318-947c-dd8e-b7a3-06fadd420f32">
+    <mxGraphModel dx="1434" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-12" value="" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;labelBackgroundColor=none;strokeColor=#000000;strokeWidth=1;fillColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;align=center;comic=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="1090" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-13" value="" style="line;strokeWidth=1;html=1;rounded=0;shadow=0;labelBackgroundColor=none;fillColor=none;fontFamily=Verdana;fontSize=14;fontColor=#000000;align=center;comic=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="160" width="1060" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-14" value="" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;labelBackgroundColor=none;strokeWidth=1;fillColor=none;fontFamily=Verdana;fontSize=12;align=center;comic=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="180" width="1040" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-15" value="Home" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" parent="1" vertex="1">
+          <mxGeometry x="414" y="195" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-16" value="Prediction" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" parent="1" vertex="1">
+          <mxGeometry x="561" y="195" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-17" value="History" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" parent="1" vertex="1">
+          <mxGeometry x="707" y="195" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-18" value="LOGO" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="70" y="80" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-19" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 17px;&quot;&gt;Logout&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="990" y="85" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gzCSpesmcP3M8DUf9BJg-66" value="&lt;h1&gt;&lt;b style=&quot;border-color: var(--border-color); font-family: Verdana; font-size: 14px;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 20px;&quot;&gt;What models are used for VeggieTales?&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="280" width="980" height="420" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

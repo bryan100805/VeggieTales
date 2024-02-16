@@ -1,0 +1,30 @@
+<!--Page that reveals information about type of data included in prediction-->
+
+<!-- Inherits from layout.html -->
+{% extends "layout.html" %}
+<!-- The block content replace the one encapsulated in layout.html -->
+{% block content %}
+<div class="container bg-light py-5">
+    <div class="row">
+        <div class = 'col-md-12'>
+            <h2 class="text-center text-primary">{{title}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <h3 class="mt-4">Did you know that?</h3>
+            <ul class="list-unstyled">
+                <p>Carrots are excellent source of beta-carotene, which is converted to Vitamin A in the body.<br>
+                They promote healthy vision, skin, and immune function.</p>
+                <li><strong>Cooking tip: </strong>Eat them raw as a snack or include in soups and stir-fries</li>
+            </ul>
+            <ul class="list-unstyled">
+                <p>Cabbage is a cruciferous vegetable that offers vitamins C and K and is low in calories.<br>
+                It may contribute to digestive health and has potential anti-inflammatory effects.</p>
+                <li><strong>Cooking tip: </strong>Shred cabbage for coleslaw, sauté, or use it in soups or stews.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

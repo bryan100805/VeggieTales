@@ -1,0 +1,103 @@
+<!--Page that shows the prediction history-->
+
+<!-- Inherits from layout.html -->
+{% extends "layout.html" %}
+<!-- The block content replace the one encapsulated in layout.html -->
+{% block content %}
+<div class="container bg-light py-5 pl-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center">{{title}}</h3>
+    </div>
+  </div>
+
+  {% if entries | length > 0 %}
+  <div class="row">
+    <div class="col-md-9 m-2 container">
+      <div class="table-responsive">
+        <hr />
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Entry ID</th>
+              <th>Image</th>
+              <th>Model</th>
+              <th>Prediction</th>
+              <th>Probability</th>
+              <th>Timestamp</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for entry in entries %}
+            <tr>
+              <td>{{ entry.id }}</td>
+              <td><img src="data:image/jpeg;base64, {{entry.image}}" alt="Uploaded Image"
+                  style="max-width: 100px; max-height: 100px;"></td>
+              <td>{{ entry.DL_model}}</td>
+              <td>{{ entry.prediction }}</td>
+              <td>{{ entry.probability }}%</td>
+              <td>{{ entry.predicted_on }}</td>
+              <td>
+                <form name="frmRemoveEntry" action="/remove" method="post" enctype="multipart/form-data" novalidate>
+                  <input type="hidden" name="id" value="{{entry.id}}">
+                  <input type="submit" class="form-control btn-danger" value="Remove">
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col pt-3">
+      <form action="/filterHistories" method="post" enctype="multipart/form-data" id="filterEntries" novalidate>
+        <div class="row d-flex justify-content-right">
+          <div class="input-group">
+            {{search_history_form.search_bar(class="form-control, h-75, w-75", placeholder="Search", id="search_bar")}}
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="bi bi-search"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h5><u>Filter:</u></h5>
+        </div>
+        <div class="row">
+          <b>{{search_history_form.filter_by_timestamp.label}}</b>
+        </div>
+        <div class="row">
+          {{search_history_form.filter_by_timestamp(class="form-control, w-75", id="timestamp_filter")}}
+        </div>
+        <div class="row pt-2">
+          <b>{{search_history_form.filter_by_probability.label}}</b>
+        </div>
+        <div class="row">
+          {{search_history_form.filter_by_probability(class="form-control, w-75", id="probability_filter")}}
+        </div>
+        <div class="row">
+          <b>{{search_history_form.filter_by_model.label}}</b>
+        </div>
+        <div class="row">
+          {{search_history_form.filter_by_model(id="model_filter")}}
+        </div>
+        <div class="row">
+          <b>{{search_history_form.filter_by_prediction.label}}</b>
+        </div>
+        <div class="row">
+          {{search_history_form.filter_by_prediction(id="prediction_filter")}}
+        </div>
+      </form>
+    </div>
+  </div>
+
+  {% else %}
+  <div class="row">
+    <div class="col m-2 container py-5 pr-5">
+      <h2 class="text-center text-dark bg-warning pt-5 pb-5">No entries found <i class="bi bi-exclamation-triangle"></i></h2>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

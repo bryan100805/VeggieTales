@@ -1,0 +1,81 @@
+<!--Page that allows users to login to their prediction history-->
+
+<!-- Inherits from layout.html -->
+{% extends "layout.html" %}
+<!-- The block content replace the one encapsulated in layout.html -->
+{% block content %}
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const passwordInput = document.querySelector('.password-input')
+        const togglePassword = document.querySelector('.toggle-password')
+    
+        if (passwordInput && togglePassword){
+            togglePassword.addEventListener('click', function(){
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text':'password';
+                passwordInput.setAttribute('type', type);
+            })
+        }
+    })
+</script>
+<div class="container">
+    <div class="row">
+        <div class = 'col-md-6 offset-md-3 bg-light py-5 px-5'>
+            <div class="text-center">
+                <h2>{{title}}</h2>
+            </div>
+            <form name="frmLogin" method="post" novalidate>
+                {{form.hidden_tag()}}
+                <div class="form-group">
+                    {{form.username.label}}<br>
+                    {{form.username(class='form-control')}}
+                    {% for error in form.username.errors %}
+                    <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    {{form.password.label}}<br>
+                    <div class="input-group">
+                        {{form.password(class='form-control password-input')}}
+                        <div class="input-group-append">
+                            <span class="input-group-text toggle-password">
+                                <i class="bi bi-eye"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.password.errors %}
+                    <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                <div class="form-group pt-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{form.remember(class='form-control-input')}}
+                            {{form.remember.label}}
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <p class="mb-0">
+                                <a href="{{url_for('forgot_password_page')}}">Forgot your password?</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group pt-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{form.submit(class='btn btn-outline-success form-control')}}
+                        </div>
+                        <div class="col-md-6">
+                            <input type="reset" class="btn btn-outline-secondary form-control" value="Reset">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row text-center">
+                <p class="mb-0">Don't have an account?
+                    <a href="{{url_for('registration_page')}}">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

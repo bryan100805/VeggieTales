@@ -1,0 +1,71 @@
+<!--Page that contains the prediction form-->
+
+<!-- Inherits from layout.html -->
+{% extends "layout.html" %}
+<!-- The block content replace the one encapsulated in layout.html -->
+{% block content %}
+
+<div class="container-fluid clearfix bg-light py-5">
+    <div class="row mb-4">
+        <div class = 'col-md-12'>
+            <h3 class="text-center">{{title}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <form name="frmPredict" action="/predict" method="post" enctype="multipart/form-data" novalidate>
+                {{form.hidden_tag()}}
+                <div class="row d-flex justify-content-left">
+                    <div class="col-md-6 d-flex form-group pt-4">
+                        <fieldset class="form-group mb-0">
+                            <div class="container-dropzone tr-landing-upload-file-zone">
+                                <div tabindex="0" id="image_border">
+                                    <input accept=".png .jpg .jpeg" multiple type="file" autocomplete="off" tabindex="-1" id="file-input" onchange="displayImages(event)">
+                                    <div class="flex" id="preview-image">
+                                        <!-- <img class="icon faded p-2" src="assets/icons/zip-folder.png" alt="Zip">
+                                        <div class="ms-2 me-2" style="height: 40px; border-left: 1px solid rgb(203, 203, 203);">
+                                        </div> -->
+                                        <i class="bi bi-image"></i>
+                                    </div>
+                                    <div class="mt-2 align-items-center">
+                                        <span>Drag &amp; drop or select the image for prediction.</span>
+                                        <div class="mt-2 mb-2">
+                                            {{form.file_upload(class="form-control", id="file-upload", onchange="displayImages(event)")}}
+                                            {% for error in form.file_upload.errors %}
+                                            <span class="error-message">{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class ="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="form-group">
+                                    <label for="model-select" class="form-label">{{form.model.label}}</label>
+                                    {{form.model(class='form-control', id='model-select')}}
+                                    {% for error in form.model.errors %}
+                                    <span class="error-message">{{ error }}</span>
+                                    {% endfor %}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <p id="model_description">Select a model to see its description.</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2 d-flex flex-column justify-content-center">
+                            <div class="col-md-12 text-center">
+                                {{form.submit(class='btn btn-outline-success form-control btn-sm align-self-center', style='width:50%')}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

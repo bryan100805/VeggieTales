@@ -1,0 +1,31 @@
+stages:
+  - test
+  - deploy
+  - notification
+
+pytest:
+  stage: test
+  before_script:
+    - pwd
+  image: python:3.8
+  script:
+    - pip install -r requirements.txt
+    # Skip local deployment test because docker does not store the local files used to run the test in the container
+    - python -m pytest -k "not tests/test_docker_local.py" --junitxml=junit.xml
+  artifacts:
+    reports:
+      junit: junit.xml
+
+deployment:
+  stage: deploy
+  script:
+    - curl https://veggietales-cnn.onrender.com/v1/models/veggie_cnn_31x31
+    - curl https://veggietales-cnn.onrender.com/v1/models/veggie_cnn_128x128
+  only:
+    - main
+
+notification:
+  stage: notification
+  script:
+    - 'if [ "$CI_PIPELINE_STATUS" == "success" ]; then curl -X POST -H "Content-type: application/json" --data "{\"content\":\"Pipeline Succeeded: $CI_COMMIT_REF_NAME - $CI_COMMIT_TITLE\"}" https://discord.com/api/webhooks/1200457121326710914/8NBM-ImDrvrtSmNB-Ynay07tBz9H5NvLC64gJSF9W1Vu5DluE-UrulhCuCu28gYy08Hy; fi'
+    - 'if [ "$CI_PIPELINE_STATUS" == "failed" ]; then curl -X POST -H "Content-type: application/json" --data "{\"content\":\"Pipeline Failed: $CI_COMMIT_REF_NAME - $CI_COMMIT_TITLE\"}" https://discord.com/api/webhooks/1200457121326710914/8NBM-ImDrvrtSmNB-Ynay07tBz9H5NvLC64gJSF9W1Vu5DluE-UrulhCuCu28gYy08Hy; fi'

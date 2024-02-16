@@ -1,0 +1,423 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="694,6804" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Drive;assembly=UiPath.GSuite.Activities" xmlns:ugas="clr-namespace:UiPath.GSuite.Activities.Sheets;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="96">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive</x:String>
+      <x:String>UiPath.Activities.System.FileOperations</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="704,6739" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="x:Object" Name="Username" />
+      <Variable x:TypeArguments="x:Object" Name="Email" />
+      <Variable x:TypeArguments="x:Object" Name="Password" />
+      <Variable x:TypeArguments="ui:UiElement" Name="_out_NTypeInto_1__OutUiElement" />
+      <Variable x:TypeArguments="x:Object" Name="Large_Model" />
+      <Variable x:TypeArguments="x:Boolean" Name="Image1" />
+      <Variable x:TypeArguments="x:String" Name="_out_GoogleSheetsApplicationScope_1__FileId" />
+      <Variable x:TypeArguments="x:Object" Name="Mail_Sender" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Registration" sap:VirtualizedContainerService.HintSize="662,6651" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="628,6393" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="2b01.2214449.tanwentaobryan@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" FileId="[_out_GoogleSheetsApplicationScope_1__FileId]" sap:VirtualizedContainerService.HintSize="586,6303" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_1" Mode="Browse" SpreadsheetId="https://docs.google.com/spreadsheets/d/1pAKiovF8M-Z9QR1TUYx9Ayp0EJEQRHru4zIeLSHoTRo/edit?usp=drivesdk" SpreadsheetName="DevOps_CA2_UIPath" UseConnectionService="False" UserEmail="2b01.2214449.tanwentaobryan@gmail.com">
+              <ugas:GoogleSheetsApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="VeggieTales" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,6009" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uga:ReadCell CellValue="{x:Null}" ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="A2" DisplayName="Read Cell" GoogleSpreadsheet="[VeggieTales]" sap:VirtualizedContainerService.HintSize="510,190" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Registration">
+                      <uga:ReadCell.CellValueGeneric>
+                        <OutArgument x:TypeArguments="x:Object">[Username]</OutArgument>
+                      </uga:ReadCell.CellValueGeneric>
+                    </uga:ReadCell>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,218.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" OutUiElement="[_out_NTypeInto_1__OutUiElement]" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Text="[UiPathObjectExtensions.AsText(Username)]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/register" CvElementArea="1357, 997, 1110, 99" CvType="InputBox" DesignTimeRectangle="1362, 1003, 1102, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' class='form-control' aaname='Username' /&gt;" Guid="968c5c6b-720d-40ac-851b-69a3cc338855" InformativeScreenshot="ef125243e26e8dab25edd2ed7694bec1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Registration' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="1359, 936, 177, 36" CvTextArgument="Username" CvType="Text" DesignTimeRectangle="1362, 926, 171, 58" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Username' check:innerText='Username' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uga:ReadCell CellValue="{x:Null}" ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="B2" DisplayName="Read Cell" GoogleSpreadsheet="[VeggieTales]" sap:VirtualizedContainerService.HintSize="510,190" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Registration">
+                      <uga:ReadCell.CellValueGeneric>
+                        <OutArgument x:TypeArguments="x:Object">[Email]</OutArgument>
+                      </uga:ReadCell.CellValueGeneric>
+                    </uga:ReadCell>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,218.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Text="[UiPathObjectExtensions.AsText(Email)]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/register" CvElementArea="1354, 1202, 1112, 100" CvType="InputBox" DesignTimeRectangle="1362, 1209, 1102, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control' aaname='Email' /&gt;" Guid="8f702a57-9525-4f71-9c17-2222a55172c1" InformativeScreenshot="d11b2c5499c2b3e00189fa19aded55a8.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Registration' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="1359, 1140, 93, 39" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="1362, 1132, 91, 58" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' type='' class='' check:innerText='Email' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uga:ReadCell CellValue="{x:Null}" ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="C2" DisplayName="Read Cell" GoogleSpreadsheet="[VeggieTales]" sap:VirtualizedContainerService.HintSize="510,190" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName="Registration">
+                      <uga:ReadCell.CellValueGeneric>
+                        <OutArgument x:TypeArguments="x:Object">[Password]</OutArgument>
+                      </uga:ReadCell.CellValueGeneric>
+                    </uga:ReadCell>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,218.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Text="[UiPathObjectExtensions.AsText(Password)]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/register" CvElementArea="1358, 1407, 1022, 102" CvType="InputBox" DesignTimeRectangle="1362, 1415, 1004, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control password-input' aaname='Password' /&gt;" Guid="841a9bb2-9481-4af9-aacf-0b483b5b3aca" InformativeScreenshot="b8d30ab6683dc2a748b4b370d9628196.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Registration' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="1359, 1347, 162, 39" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="1362, 1339, 159, 58" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Confirm Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,218.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Text="[UiPathObjectExtensions.AsText(Password)]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/register" CvElementArea="1356, 1616, 1110, 100" CvType="InputBox" DesignTimeRectangle="1362, 1622, 1102, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="InputBoxPassword" FriendlyName="'INPUT confirm_password'" FullSelectorArgument="&lt;webctrl id='confirm_password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='confirm_password' tag='INPUT' type='password' class='form-control' aaname='Confirm Password' /&gt;" Guid="40d0e6c7-3cff-45e8-83df-fac5000d51dc" InformativeScreenshot="9fb0799c8a0218cb0c791d72722b8461.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Registration' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="1356, 1554, 312, 39" CvTextArgument="Confirm Password" CvType="Text" DesignTimeRectangle="1362, 1545, 305, 58" ElementType="Text" FriendlyName="'Confirm Password'" FullSelectorArgument="&lt;webctrl aaname='Confirm Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirm Password' tag='LABEL' type='' class='' check:innerText='Confirm Password' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="510,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/register" CvElementArea="1356, 1766, 526, 101" CvTextArea="1548, 1797, 141, 45" CvTextArgument="Register" CvType="Button" DesignTimeRectangle="1362, 1771, 515, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="Button" FriendlyName="'Register'" FullSelectorArgument="&lt;webctrl id='submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submit' tag='INPUT' type='submit' class='btn btn-outline-success form-control' aaname='Register' check:text='Register' /&gt;" Guid="367af9b9-8db5-4793-88f7-f0b8fc653b1b" InformativeScreenshot="1f6e14d55b2358f00bc3595312b49eae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Registration' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="510,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/register" CvTextArea="1764, 1911, 111, 45" CvTextArgument="Log In" CvType="Text" DesignTimeRectangle="1768, 1903, 106, 51" DesignTimeScaleFactor="2.4000000953674316" ElementType="Text" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl aaname=' Log In' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Log In' tag='A' type='' class='' check:innerText='Log In' /&gt;" Guid="7d7ad943-1ee7-4363-8ebc-174c5cba8696" InformativeScreenshot="6da4724ee43573a011c87d86b20ee367.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Registration' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,218.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Text="[UiPathObjectExtensions.AsText(Username)]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/login" CvElementArea="1380, 998, 1112, 99" CvType="InputBox" DesignTimeRectangle="1387, 1003, 1102, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' class='form-control' aaname='Username' /&gt;" Guid="201ec747-8049-40e1-bc47-51346c7b72c7" InformativeScreenshot="58370efeb460c1971f8302b36d55c9d6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="1383, 936, 177, 39" CvTextArgument="Username" CvType="Text" DesignTimeRectangle="1387, 926, 171, 58" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Username' check:innerText='Username' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510,218.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Text="[UiPathObjectExtensions.AsText(Password)]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/login" CvElementArea="1380, 1203, 1020, 100" CvType="InputBox" DesignTimeRectangle="1387, 1209, 1004, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control password-input' aaname='Password' /&gt;" Guid="6c514269-666c-4209-9759-508966f427cc" InformativeScreenshot="8289036c48d0196b83df6af2887f28b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="1383, 1140, 165, 39" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="1387, 1132, 159, 58" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="510,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/login" DesignTimeRectangle="2420, 1226, 38, 58" DesignTimeScaleFactor="2.4000000953674316" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='bi bi-eye' aaname='' /&gt;" Guid="ad1c9c08-e602-4236-8a71-a3826af881a5" InformativeScreenshot="700b9a064226dd059216a7c68dceac85.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="510,158" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/login" CvElementArea="1380, 1364, 40, 40" CvType="CheckBox" DesignTimeRectangle="1387, 1371, 31, 31" DesignTimeScaleFactor="2.4000000953674316" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='remember' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='remember' tag='INPUT' type='checkbox' class='form-control-input' aaname='Remember Me' /&gt;" Guid="19388757-c6a8-45c0-bb6d-701537276955" InformativeScreenshot="5ba142c59154c5182db8a3b202fc717a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="1425, 1368, 255, 39" CvTextArgument="Remember Me" CvType="Text" DesignTimeRectangle="1429, 1358, 249, 58" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Remember Me' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Remember Me' tag='LABEL' type='' class='' check:innerText='Remember Me' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="510,158" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/login" CvElementArea="1382, 1488, 525, 100" CvTextArea="1593, 1518, 99, 48" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="1387, 1492, 515, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl id='submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submit' tag='INPUT' type='submit' class='btn btn-outline-success form-control' aaname='Login' check:text='Login' /&gt;" Guid="8781fb5b-6c1c-4aa7-8560-cab35f62e37f" InformativeScreenshot="d6336c38228fc9c0e6f7110f250d7f69.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Prediction'" sap:VirtualizedContainerService.HintSize="510,158" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/prediction" CvTextArea="960, 537, 174, 39" CvTextArgument="Prediction" CvType="Text" DesignTimeRectangle="944, 508, 210, 96" DesignTimeScaleFactor="2.4000000953674316" ElementType="Text" FriendlyName="'Prediction'" FullSelectorArgument="&lt;webctrl aaname='Prediction' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Prediction' tag='A' type='' class='nav-item nav-link text-dark ' check:innerText='Prediction' /&gt;" Guid="2ceeef61-38ec-409b-bb3b-1b343afd5ad5" InformativeScreenshot="55c97fa3cf6aa9f124d6e28050c89936.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vegetable Prediction' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Timeout="{x:Null}" Account="2b01.2214449.tanwentaobryan@gmail.com" Connector="uipath-google-drive" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="510,2489" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="False" UserEmail="2b01.2214449.tanwentaobryan@gmail.com">
+                      <ugad:GoogleDriveApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ugad:IGoogleDriveTarget" Name="GoogleDrive" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2346" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uga:DownloadFile ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Download File" DriveTarget="[GoogleDrive]" FileFriendlyName="1001.jpg" FileId="https://drive.google.com/file/d/1GtojpOl_KY9ftWMb9qDA8d6q-U4gHVP6/view?usp=drivesdk" FileIdSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="DownloadFile_1" LocalPath="[string.Format(&quot;{0}\Downloads\1001.jpg&quot;, Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))]" SupportsTeamDrives="False" />
+                            <uga:ReadCell CellValue="{x:Null}" ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="B2" DisplayName="Read Cell" GoogleSpreadsheet="[VeggieTales]" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Models Used">
+                              <uga:ReadCell.CellValueGeneric>
+                                <OutArgument x:TypeArguments="x:Object">[Large_Model]</OutArgument>
+                              </uga:ReadCell.CellValueGeneric>
+                            </uga:ReadCell>
+                            <uix:NSelectItem DisplayName="Select Item 'CNN Model'" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[UiPathObjectExtensions.AsText(Large_Model)]" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                              <uix:NSelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="2">
+                                  <x:String>Veggie CNN (31x31)</x:String>
+                                  <x:String>Veggie CNN (128x128)</x:String>
+                                </scg:List>
+                              </uix:NSelectItem.Items>
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/prediction" CvTextArea="2010, 1215, 348, 48" CvTextArgument="Veggie CNN (31x31)" CvType="Text" DesignTimeRectangle="1974, 1189, 1038, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="DropDown" FriendlyName="'Veggie CNN (31x31)'" FullSelectorArgument="&lt;webctrl id='model-select' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='model-select' tag='SELECT' type='' class='form-control' aaname='CNN Model' /&gt;" Guid="6775a037-e192-473a-b2be-a8f81de882eb" InformativeScreenshot="8231ebb40374c8df45943a5b8ff58a0b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vegetable Prediction' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target CvTextArea="1968, 1101, 207, 39" CvTextArgument="CNN Model" CvType="Text" DesignTimeRectangle="1974, 1093, 201, 77" ElementType="Text" FriendlyName="'CNN Model'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='form-label' aaname='' check:innerText='CNN Model' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Drag &amp;'" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/prediction" CvElementArea="1004, 1358, 234, 78" CvTextArea="1023, 1377, 465, 39" CvTextArgument="Choose file No file chosen" CvType="Button" DesignTimeRectangle="979, 1346, 799, 91" DesignTimeScaleFactor="2.4000000953674316" ElementType="InputBox" FriendlyName="'INPUT file-upload'" FullSelectorArgument="&lt;webctrl id='file-upload' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='file-upload' tag='INPUT' type='file' class='form-control' aaname='' /&gt;" Guid="bc1e1681-2420-4c2e-beac-4f4f93b5ea13" InformativeScreenshot="27f4160d7438b3884efa2ffce9f4f3d3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vegetable Prediction' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target CvTextArea="975, 1278, 804, 45" CvTextArgument="Drag &amp; drop or select the image for prediction." CvType="Text" DesignTimeRectangle="979, 1272, 799, 51" ElementType="Text" FriendlyName="'Drag &amp;'" FullSelectorArgument="&lt;webctrl parentid='image_border' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='image_border' tag='SPAN' type='' class='' aaname='Drag &amp;amp; drop or select the image for prediction.' check:innerText='Drag &amp;amp; drop or select the image for prediction.' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Open" sap:VirtualizedContainerService.HintSize="434,541" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="89a474b3-4c0b-42a8-99b2-facc858423ab" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click '1001'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="89a474b3-4c0b-42a8-99b2-facc858423ab" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable CvTextArea="609, 498, 75, 36" CvTextArgument="1001" CvType="Text" DesignTimeRectangle="606, 482, 708, 66" DesignTimeScaleFactor="3" ElementType="Text" FriendlyName="'1001'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='0' /&gt;&lt;ctrl automationid='0' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='0' /&gt;&lt;ctrl automationid='0' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' role='editable text' check:text='1001' /&gt;" Guid="f6c28153-15d8-426e-882b-b0b8c2054209" InformativeScreenshot="a01b7927454df52bc8be68a51ab37623.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="0, 0, 1920, 1440" Arguments="1001.jpg" FilePath="C:\Program Files\Google\Chrome\Application\chrome.exe" IconBase64="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" InformativeScreenshot="28c9ecbef1f00571c56bc7d160970346.png" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" Title="Open" />
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Predict'" sap:VirtualizedContainerService.HintSize="434,195" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/predict" CvElementArea="1141, 1911, 318, 91" CvTextArea="1245, 1941, 108, 33" CvTextArgument="Predict" CvType="Button" DesignTimeRectangle="1146, 1915, 309, 84" DesignTimeScaleFactor="2.4000000953674316" ElementType="Button" FriendlyName="'Predict'" FullSelectorArgument="&lt;webctrl id='submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submit' tag='INPUT' type='submit' class='btn btn-outline-success form-control btn-sm align-self-center' aaname='Predict' check:text='Predict' /&gt;" Guid="3cf4d2d0-f5aa-4b29-900a-3996c239d50d" InformativeScreenshot="a43d20847d8150fc79feebb5ee0acf6b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vegetable Prediction' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="Button 'Predict'" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/prediction" CvElementArea="2202, 1704, 528, 91" CvTextArea="2412, 1734, 111, 33" CvTextArgument="Predict" CvType="Button" DesignTimeRectangle="2208, 1709, 519, 84" DesignTimeScaleFactor="2.4000000953674316" ElementType="Button" FriendlyName="'Predict'" FullSelectorArgument="&lt;webctrl id='submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submit' tag='INPUT' type='submit' class='btn btn-outline-success form-control btn-sm align-self-center' aaname='Predict' check:text='Predict' /&gt;" Guid="693e5ea2-2502-4c21-bae7-51ea8011dccb" InformativeScreenshot="ded1314a526d4c6bea8770121ea13f54.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vegetable Prediction' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:VerifyExecutionOptions.Target>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                            <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'History'" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/prediction" CvTextArea="1170, 351, 126, 45" CvTextArgument="History" CvType="Text" DesignTimeRectangle="1154, 322, 159, 96" DesignTimeScaleFactor="2.4000000953674316" ElementType="Text" FriendlyName="'History'" FullSelectorArgument="&lt;webctrl aaname='History' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='History' tag='A' type='' class='nav-item nav-link text-dark ' check:innerText='History' /&gt;" Guid="fb3126da-430d-49e9-84b9-2a74b1d8f283" InformativeScreenshot="27047ece87e0fec7e86901bbec5c04b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vegetable Prediction' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="863a0dc6-4afb-4278-b6ae-8b82a86aecfe" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://veggietales.onrender.com/history" CvElementArea="3620, 514, 168, 81" CvTextArea="3642, 537, 126, 45" CvTextArgument="Logout" CvType="Button" DesignTimeRectangle="3626, 521, 157, 70" DesignTimeScaleFactor="2.4000000953674316" ElementType="Button" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl parentid='navbarText' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='navbarText' tag='BUTTON' type='' class='nav-item btn-danger rounded' aaname='Logout' check:innerText='Logout' /&gt;" Guid="0b451352-d622-4d39-aea0-229034611c72" InformativeScreenshot="62b26de77d628c54b64695341da5bb1e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prediction History' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </ugad:GoogleDriveApplicationScope.Body>
+                      <ugad:GoogleDriveApplicationScope.CredentialID>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ugad:GoogleDriveApplicationScope.CredentialID>
+                      <ugad:GoogleDriveApplicationScope.CredentialSecret>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ugad:GoogleDriveApplicationScope.CredentialSecret>
+                    </ugad:GoogleDriveApplicationScope>
+                  </Sequence>
+                </ActivityAction>
+              </ugas:GoogleSheetsApplicationScope.Body>
+              <ugas:GoogleSheetsApplicationScope.CredentialID>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ugas:GoogleSheetsApplicationScope.CredentialID>
+              <ugas:GoogleSheetsApplicationScope.CredentialSecret>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ugas:GoogleSheetsApplicationScope.CredentialSecret>
+            </ugas:GoogleSheetsApplicationScope>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-18, -18, 3876, 2292" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="40cef0df3708424e6c1d043e08508f9f.jpg" Selector="&lt;html app='chrome.exe' title='Registration' /&gt;" Title="Registration" Url="https://veggietales.onrender.com/register" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </ueab:SequenceX>
+</Activity>
