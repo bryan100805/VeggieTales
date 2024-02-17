@@ -5,8 +5,8 @@ With the help of tensorflow-serving and docker, the models will be served in pro
 (i.e. https://veggietales-cnn.onrender.com/v1/models/veggie_cnn_128x128) so users are able to enjoy the full features of the models to help to make predictions. 
 
 #### CI/CD pipeline has also been demonstrated
-CI - Each commit and merge triggers an automated series of tests using PyTest to ensure changes do not conflict with existing codebase
-CD - Every change that passed automated testing will be automatically deployed to production via Render
+CI - Each commit and merge triggers an automated series of tests using PyTest to ensure changes do not conflict with existing codebase <br>
+CD - Every change that passed automated testing will be automatically deployed to production via Render <br> 
 Feedback Loop - As part of CI, developers receive immediate feedback, allowing problems to be addressed quickly. This was done through Discord, making use of webhooks linked to Gitlab and everytime users commit their code, merge their code, make changes to issues etc., a notification will be send to the Discord Channel
 
 #### Web Application (i.e. https://veggietales.onrender.com/login)
